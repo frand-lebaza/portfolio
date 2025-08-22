@@ -30,10 +30,10 @@ const PageContainer = styled.div`
     gap: 5%;
 
     @media (max-width: 760px) {
-        flex-direction: column;   /* 👉 Se ponen uno debajo del otro */
-        gap: 30px;                /* más espacio entre ellos */
-        height: 100vh;             /* permite crecer según contenido */
-        padding: 40px 0;          /* agrega espacio vertical */
+        flex-direction: column;   
+        gap: 30px;                
+        height: 100vh;             
+        padding: 40px 0;         
     }
 `;
 
@@ -63,8 +63,8 @@ const ContentTwo = styled.div`
     padding-inline: 20px;
 
     @media (max-width: 760px) {
-        width: 90%;          /* ocupa más ancho en móvil */
-        height: auto;        /* deja que crezca con el texto */
-        text-align: center;  /* centra el texto */
+        width: 90%;         
+        height: auto;        
+        text-align: center;  
     }
 `;
