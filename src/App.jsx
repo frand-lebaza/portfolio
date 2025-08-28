@@ -14,7 +14,7 @@ function App() {
     <>
     <GlobalStyle/>
       <BrowserRouter>
-        {/* <NavBar /> */}
+        <NavBar />
         <AppRoutes />
       </BrowserRouter>
     </>
