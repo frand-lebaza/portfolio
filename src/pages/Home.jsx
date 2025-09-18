@@ -1,25 +1,71 @@
 import styled from "styled-components";
-import photo from "../media/frandia.jpg"
+import photo from "../media/frand.JPG"
 import backg from "../media/backg.png"
 
 function Home() {
     return (
+        <>
+            <PageContainer>
+                <ContentOne>
+                    <Logo src={photo} alt="Logo" />
+                    <div className="text-container">
+                        <Name>Frand Lebaza</Name>
+                        <span className="text-profession">Desarrollador de software full stack</span>
+                    </div>
 
-        <PageContainer>
-            <ContentOne>
-                <Logo  src={photo} alt="Logo"/>
-                <div className="text-container">
-                <Name>Frand Lebaza</Name>
-                <span className="text-profession">Desarrollador de softwarefull stack</span>
-                </div>
-                
-            </ContentOne>
-            <ContentTwo>
-                <h1>Transformo ideas en soluciones digitales reales</h1>
-                <h2>Soy Frand, desarrollador de software. Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</h2>
-            </ContentTwo>
-        </PageContainer>
+                </ContentOne>
+                <ContentTwo>
+                    <h2>Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</h2>
+                </ContentTwo>
+            </PageContainer>
 
+       {/*      <PageContainer>
+                <Title>🚀 Mi Stack Tecnológico</Title>
+                <Categories>
+                    <Card>
+                        <CategoryTitle>Frontend</CategoryTitle>
+                        <TechList>
+                            <TechItem>React</TechItem>
+                            <TechItem>Vite</TechItem>
+                            <TechItem>Material UI</TechItem>
+                            <TechItem>styled-components</TechItem>
+                        </TechList>
+                    </Card>
+                    <Card>
+                        <CategoryTitle>Backend</CategoryTitle>
+                        <TechList>
+                            <TechItem>Django REST Framework</TechItem>
+                            <TechItem>APIs REST</TechItem>
+                        </TechList>
+                    </Card>
+                    <Card>
+                        <CategoryTitle>IA & Agentes</CategoryTitle>
+                        <TechList>
+                            <TechItem>LangChain</TechItem>
+                            <TechItem>LangGraph</TechItem>
+                            <TechItem>OpenAI</TechItem>
+                        </TechList>
+                    </Card>
+
+                    <Card>
+                        <CategoryTitle>Infraestructura</CategoryTitle>
+                        <TechList>
+                            <TechItem>UltraMsg (WhatsApp)</TechItem>
+                            <TechItem>Deploy en servidor</TechItem>
+                        </TechList>
+                    </Card>
+
+                    <Card>
+                        <CategoryTitle>Herramientas</CategoryTitle>
+                        <TechList>
+                            <TechItem>Git & GitHub</TechItem>
+                            <TechItem>VSCode</TechItem>
+                        </TechList>
+                    </Card>
+                </Categories>
+        </PageContainer>  */}           
+
+        </>
     );
 }
 
@@ -70,7 +116,7 @@ display: flex;
 
         .text-profession{
             font-size: 25px;
-            color: red;
+            color: aquamarine;
               animation: fadeIn 1s ease-in-out;
         }
     }
@@ -139,4 +185,79 @@ const ContentTwo = styled.div`
         height: auto;        
         text-align: center;  
     }
+`;
+
+
+const StackSection = styled.section`
+  padding: 2rem;
+  background-color: #1a1b22ff;
+`;
+
+const Title = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: aquamarine;
+`;
+
+const Categories = styled.div`
+    display: flex;
+  gap: 1.5rem;
+`;
+
+const Card = styled.div`  
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 2px 4px 2px rgba(85, 157, 153, 0.1);
+`;
+
+const CategoryTitle = styled.h3`
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: aquamarine;
+`;
+
+const TechList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const TechItem = styled.li`
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  color: white;
+`;
+
+
+const ContentThree = styled.div`
+  position: relative;
+  background-color: #000000ff;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas iguales */
+  gap: 10px; /* espacio entre bloques */
+  padding: 10px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Solo una columna */
+    
+    /* Los hijos no deben tener grid-column/grid-row fijos */
+    & > div {
+      grid-column: auto !important;
+      grid-row: auto !important;
+      height: 200px; /* Altura adaptable */
+    }
+  }
+`;
+
+const CollageItem = styled.div`
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  
 `;
