@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import photo from "../media/frand.JPG"
-import backg from "../media/backg.png"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -18,22 +17,22 @@ function Home() {
 
           </ContentOne>
           <ContentTwo>
-            <h2>Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</h2>
+            <span>Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</span>
           </ContentTwo>
-          <ContentOne>
-            <CardNetworks>
+          <ContentNetworks>
+             <CardNetworks href="https://github.com/frand-lebaza">
               <LogoGit>
                 <FaGithub />
               </LogoGit>
-              <Text>GitHub</Text>
+              <Text >GitHub</Text>
             </CardNetworks>
-            <CardNetworks>
+            <CardNetworks href="https://www.linkedin.com/in/frand-lebaza/">
               <LogoLink>
                 <FaLinkedin />
               </LogoLink>
-              <Text>LinkedIn</Text>
+              <Text >LinkedIn</Text>
             </CardNetworks>
-          </ContentOne>
+          </ContentNetworks>
         </SectionContentY>
       </MainContainer>
       <MainContainer>
@@ -124,8 +123,8 @@ const SectionContentY = styled.div`
     @media (max-width: 760px) {
         flex-direction: column;   
         gap: 30px;                
-        height: 100vh;             
-        padding: 40px 0;         
+        padding: 40px 0;  
+        margin-inline: 0;   
     }
 `;
 
@@ -134,8 +133,7 @@ display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;              
-    height: 130px;    
+    gap: 20px;        
     border-radius: 20px;
     
     .text-container{
@@ -150,37 +148,20 @@ display: flex;
               animation: fadeIn 1s ease-in-out;
         }
     }
-    @media (max-width: 760px) {
-        width: 200px;
-        height: 200px;
-    }
-`;
-const ContentNetworks = styled.div`
-display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;              
-    height: 130px;    
-    border-radius: 20px;
-    
-    .text-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
 
-        .text-profession{
-            font-size: 25px;
-            color: aquamarine;
-              animation: fadeIn 1s ease-in-out;
+    @media (max-width: 760px) {
+    flex-direction: column;
+        width: 80%;
+
+        .text-container{
+           align-items: center;
+        }
+         .text-profession{          
+          text-align: center;
         }
     }
-    @media (max-width: 760px) {
-        width: 200px;
-        height: 200px;
-    }
 `;
+
 
 const Logo = styled.img`  
     width: 100px;
@@ -188,7 +169,11 @@ const Logo = styled.img`
     object-fit: cover;
     transition: all 0.3s ease;
     border-radius: 50%;
-  
+     
+    @media (max-width: 760px) {    
+        width: 200px;
+        height: 200px;
+    }
 `;
 
 const Name = styled.span`
@@ -210,7 +195,7 @@ const Name = styled.span`
       opacity: 1;
       transform: translateY(0);
     }
-  }
+  }   
 
 `;
 
@@ -219,10 +204,18 @@ const ContentTwo = styled.div`
     text-align: justify;  
     color: #e8ebeeff;
 
+    span{
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
     @media (max-width: 760px) {
-        width: 90%;         
-        height: auto;        
-        text-align: center;  
+        width: 90%;                       
+        text-align: justify;  
+
+        span{
+          font-size: 1.2rem;
+        }
     }
 `;
 
@@ -269,7 +262,7 @@ const TechItem = styled.span`
   border: 1px solid #29423dff;
 `;
 
-const CardNetworks = styled.div`
+const CardNetworks = styled.a`
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -290,14 +283,31 @@ const CardNetworks = styled.div`
 const LogoGit = styled.div`
   font-size: 50px; /* tamaño del ícono */
   color: #ffffffff; /* color GitHub oscuro */
+
+    @media (max-width: 760px) {
+        font-size: 50px;        
+    }
 `;
 const LogoLink = styled.div`
   font-size: 50px; /* tamaño del ícono */
   color: #ffffffff; /* color GitHub oscuro */
 `;
 
-const Text = styled.span`
+const Text = styled.a`
   font-size: 1.5rem;
   font-weight: 600;
   color: #bec2c1ff;
+
+   @media (max-width: 760px) {
+        display: none;
+    }
+
 `;
+
+const ContentNetworks= styled.div`
+  backround-color: red;
+  display: flex;
+
+
+
+`
