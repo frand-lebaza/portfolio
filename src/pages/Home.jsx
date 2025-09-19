@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import photo from "../media/frand.JPG"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -20,7 +20,7 @@ function Home() {
             <span>Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</span>
           </ContentTwo>
           <ContentNetworks>
-             <CardNetworks href="https://github.com/frand-lebaza">
+            <CardNetworks href="https://github.com/frand-lebaza">
               <LogoGit>
                 <FaGithub />
               </LogoGit>
@@ -34,7 +34,7 @@ function Home() {
             </CardNetworks>
           </ContentNetworks>
         </SectionContentY>
-      </MainContainer>     
+      </MainContainer>
     </>
   );
 }
@@ -53,14 +53,13 @@ const SectionContentY = styled.div`
      flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5%;
+    gap: 40px;
     min-height: 100vh;
     margin-inline: 15%;
 
     @media (max-width: 760px) {
-        flex-direction: column;   
-        gap: 30px;                
-        padding: 40px 0;  
+        flex-direction: column;           
+        gap: 30px;       
         margin-inline: 0;   
     }
 `;
@@ -156,6 +155,18 @@ const ContentTwo = styled.div`
     }
 `;
 
+const bounce = keyframes`
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px); /* salto hacia arriba */
+  }
+  60% {
+    transform: translateY(-3px); /* rebote pequeño */
+  }
+`;
+
 const CardNetworks = styled.a`
   display: flex;
   align-items: center;
@@ -167,30 +178,32 @@ const CardNetworks = styled.a`
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   width: fit-content; /* ajusta al contenido */
+  text-decoration: none;
 
+  /* Hover con sombra extra */
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    animation: none; /* Opcional: detener animación al hover */
   }
 `;
 
 const LogoGit = styled.div`
   font-size: 50px; /* tamaño del ícono */
   color: #ffffffff; /* color GitHub oscuro */
-
-    @media (max-width: 760px) {
-        font-size: 50px;        
-    }
+   animation: ${bounce} 5s infinite;
 `;
 const LogoLink = styled.div`
   font-size: 50px; /* tamaño del ícono */
   color: #ffffffff; /* color GitHub oscuro */
+   animation: ${bounce} 6s infinite;
 `;
 
 const Text = styled.a`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #bec2c1ff;
+  text-decoration: none;
 
    @media (max-width: 760px) {
         display: none;
@@ -198,7 +211,6 @@ const Text = styled.a`
 
 `;
 
-const ContentNetworks= styled.div`
-  backround-color: red;
+const ContentNetworks = styled.div`
   display: flex;
 `
