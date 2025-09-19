@@ -34,48 +34,7 @@ function Home() {
             </CardNetworks>
           </ContentNetworks>
         </SectionContentY>
-      </MainContainer>
-      <MainContainer>
-
-        <StackContainer>
-          <Card>
-            <Title>Desarrollo IA</Title>
-            <TechItem>LangChain</TechItem>
-            <TechItem>LangGraph</TechItem>
-            <TechItem>LangSmith</TechItem>
-            <TechItem>API LLMs</TechItem>
-          </Card>
-
-          <Card>
-            <Title>Backend</Title>
-            <TechItem>Django Rest Framework</TechItem>
-            <TechItem>Node Js</TechItem>
-            <TechItem>LangSmith</TechItem>
-            <TechItem>API LLMs</TechItem>
-          </Card>
-          <Card>
-            <Title>Frontend</Title>
-            <TechItem>React</TechItem>
-            <TechItem>React Native</TechItem>
-            <TechItem>VueJs</TechItem>
-          </Card>
-
-          <Card>
-            <Title>Bases de datos</Title>
-            <TechItem>MySQL</TechItem>
-            <TechItem>PostgreSQL</TechItem>
-            <TechItem>MongoDB</TechItem>
-          </Card>
-
-          <Card>
-            <Title>Control de versiones</Title>
-            <TechItem>Git</TechItem>
-            <TechItem>GitHub</TechItem>
-            <TechItem>GitLab</TechItem>
-          </Card>
-        </StackContainer>
-      </MainContainer>
-
+      </MainContainer>     
     </>
   );
 }
@@ -85,32 +44,10 @@ export default Home;
 // Estilo para el contenedor general
 
 const MainContainer = styled.div`
- background-color: #1a1b22ff;
-  width: 100%;
-  height: 100vh;  
+ background-color: #0A0A10;
+  min-height: 100vh;  
 `;
 
-
-const PageContainer = styled.div`
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #5f6171ff;
-   
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    
-
-    @media (max-width: 760px) {
-        flex-direction: column;   
-        gap: 30px;                
-        height: 100vh;             
-        padding: 40px 0;         
-    }
-`;
 const SectionContentY = styled.div`  
     display: flex;
      flex-direction: column;
@@ -201,12 +138,12 @@ const Name = styled.span`
 
 const ContentTwo = styled.div`
     border-bottom: 1px solid white;
+    padding-bottom: 20px;
     text-align: justify;  
     color: #e8ebeeff;
 
     span{
       font-size: 1.5rem;
-      font-weight: 600;
     }
 
     @media (max-width: 760px) {
@@ -214,52 +151,9 @@ const ContentTwo = styled.div`
         text-align: justify;  
 
         span{
-          font-size: 1.2rem;
+          font-size: 18px;
         }
     }
-`;
-
-const StackContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2-3 por fila según ancho */
-  gap: 1.5rem;
-  padding: 2rem;
-  background-color: #1a1b22ff;
-  margin-inline: 15%;
-`;
-
-const Card = styled.div`
-  background: transparent; /* sin fondo */
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* sombra sutil */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 200px; /* altura fija para uniformidad */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-  }
-`;
-
-const Title = styled.h2`
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: aquamarine;
-`;
-
-const TechItem = styled.span`
-  display: inline-block;
-  margin: 0.25rem 0.4rem 0 0;
-  padding: 0.3rem 0.6rem;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  background: #29423dff;
-  color: #e8ebeeff;
-  border: 1px solid #29423dff;
 `;
 
 const CardNetworks = styled.a`
@@ -307,7 +201,4 @@ const Text = styled.a`
 const ContentNetworks= styled.div`
   backround-color: red;
   display: flex;
-
-
-
 `
