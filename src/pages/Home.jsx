@@ -35,6 +35,71 @@ function Home() {
           </ContentNetworks>
         </SectionContentY>
       </MainContainer>
+      <MainContainer>
+        <SectionContentY>
+          <ContentOne>
+            <Name>Stack Tecnológico</Name>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Desarrollo IA</span>
+                  <div className="list">
+                    <span className="itemList">LangChain</span>
+                    <span className="itemList">LangGraph</span>
+                    <span className="itemList">LangSmith</span>
+                    <span className="itemList">API LLMs</span>
+                  </div>
+                </div>
+            </ContentSkills>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Lenguajes</span>
+                  <div className="list">
+                    <span className="itemList">Python</span>
+                    <span className="itemList">JavaScript</span>
+                  </div>
+                </div>
+            </ContentSkills>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Backend</span>
+                  <div className="list">
+                    <span className="itemList">Django Rest Framework</span>
+                    <span className="itemList">NodeJs</span>
+                  </div>
+                </div>
+            </ContentSkills>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Frontend</span>
+                  <div className="list">
+                    <span className="itemList">React</span>
+                    <span className="itemList">React Native</span>
+                    <span className="itemList">Vue</span>
+                  </div>
+                </div>
+            </ContentSkills>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Bases de datos</span>
+                  <div className="list">
+                    <span className="itemList">MySql</span>
+                    <span className="itemList">PostgrSql</span>
+                  </div>
+                </div>
+            </ContentSkills>
+            <ContentSkills>
+                <div className="target">
+                  <span className="titleSkill">Control de versiones</span>
+                  <div className="list">
+                    <span className="itemList">Git</span>
+                    <span className="itemList">GitHub</span>
+                    <span className="itemList">GitLab</span>
+                  </div>
+                </div>
+            </ContentSkills>
+          </ContentOne>
+        </SectionContentY>
+      </MainContainer>
     </>
   );
 }
@@ -97,7 +162,6 @@ display: flex;
         }
     }
 `;
-
 
 const Logo = styled.img`  
     width: 100px;
@@ -213,4 +277,37 @@ const Text = styled.a`
 
 const ContentNetworks = styled.div`
   display: flex;
+`
+const ContentSkills = styled.div`
+  display: flex;  
+  padding: 5px;
+  width: 80%;
+
+  .target{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;  
+    
+    height:auto;
+    padding: 20px;
+    gap: 5px;
+    .titleSkill{
+      color: aquamarine;
+      font-weight: bold;
+       font-size: 1.5rem;
+    }
+    .list{
+        
+        display: flex;
+  flex-direction: column;
+
+  .itemList{    
+       font-size: 1.5rem;
+       color: white;
+  }
+      
+    }
+
+  }
 `
