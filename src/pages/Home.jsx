@@ -37,8 +37,8 @@ function Home() {
       </MainContainer>
       <MainContainer>
         <SectionContentY>
-          <ContentOne>
-            <Name>Stack Tecnológico</Name>
+          <Name>Stack Tecnológico</Name>
+          <ContentOne>            
             <ContentSkills>
                 <div className="target">
                   <span className="titleSkill">Desarrollo IA</span>
