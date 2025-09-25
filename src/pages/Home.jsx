@@ -17,7 +17,11 @@ function Home() {
 
           </ContentOne>
           <ContentTwo>
-            <span>Diseño y desarrollo productos digitales únicos: desde páginas web atractivas y apps escalables hasta chatbots inteligentes que potencian tu marca. Combino diseño, funcionalidad e inteligencia artificial para que destaques en el mundo online.</span>
+            <span>
+              Desarrollador con experiencia en Python, JavaScript y frameworks modernos como React y Vue. Capaz de crear soluciones tecnológicas eficientes y escalables <span className="text-focus">
+                con un enfoque cada vez más sólido en backend e integración de Inteligencia Artificial.
+                </span> Actualmente estoy profundizando en el desarrollo de proyectos con IA aplicada, integrando modelos y herramientas que aporten valor real a aplicaciones web y agentes conversacionales.
+            </span>            
           </ContentTwo>
           <ContentNetworks>
             <CardNetworks href="https://github.com/frand-lebaza">
@@ -33,71 +37,6 @@ function Home() {
               <Text >LinkedIn</Text>
             </CardNetworks>
           </ContentNetworks>
-        </SectionContentY>
-      </MainContainer>
-      <MainContainer>
-        <SectionContentY>
-          <Name>Stack Tecnológico</Name>
-          <ContentOne>            
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Desarrollo IA</span>
-                  <div className="list">
-                    <span className="itemList">LangChain</span>
-                    <span className="itemList">LangGraph</span>
-                    <span className="itemList">LangSmith</span>
-                    <span className="itemList">API LLMs</span>
-                  </div>
-                </div>
-            </ContentSkills>
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Lenguajes</span>
-                  <div className="list">
-                    <span className="itemList">Python</span>
-                    <span className="itemList">JavaScript</span>
-                  </div>
-                </div>
-            </ContentSkills>
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Backend</span>
-                  <div className="list">
-                    <span className="itemList">Django Rest Framework</span>
-                    <span className="itemList">NodeJs</span>
-                  </div>
-                </div>
-            </ContentSkills>
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Frontend</span>
-                  <div className="list">
-                    <span className="itemList">React</span>
-                    <span className="itemList">React Native</span>
-                    <span className="itemList">Vue</span>
-                  </div>
-                </div>
-            </ContentSkills>
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Bases de datos</span>
-                  <div className="list">
-                    <span className="itemList">MySql</span>
-                    <span className="itemList">PostgrSql</span>
-                  </div>
-                </div>
-            </ContentSkills>
-            <ContentSkills>
-                <div className="target">
-                  <span className="titleSkill">Control de versiones</span>
-                  <div className="list">
-                    <span className="itemList">Git</span>
-                    <span className="itemList">GitHub</span>
-                    <span className="itemList">GitLab</span>
-                  </div>
-                </div>
-            </ContentSkills>
-          </ContentOne>
         </SectionContentY>
       </MainContainer>
     </>
@@ -206,7 +145,11 @@ const ContentTwo = styled.div`
     color: #e8ebeeff;
 
     span{
-      font-size: 1.5rem;
+      font-size: 1.5rem;      
+    }
+
+    .text-focus{
+      color: aquamarine;
     }
 
     @media (max-width: 760px) {
