@@ -2,6 +2,13 @@ import styled, { keyframes } from "styled-components";
 import photo from "../media/frand.JPG"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { 
+  siPython, siReact, siJavascript, siNodedotjs, siDjango, siMysql, siPostgresql, siGit, siGithub, siGitlab, siTailwindcss, siStyledcomponents, siLangchain,
+  siLanggraph,
+  siOpenai,
+  siVuedotjs
+ } from "simple-icons/icons";
+import { SiGit } from "react-icons/si";
 
 function Home() {
   return (
@@ -18,10 +25,8 @@ function Home() {
           </ContentOne>
           <ContentTwo>
             <span>
-              Desarrollador con experiencia en Python, JavaScript y frameworks modernos como React y Vue. Capaz de crear soluciones tecnológicas eficientes y escalables <span className="text-focus">
-                con un enfoque cada vez más sólido en backend e integración de Inteligencia Artificial.
-                </span> Actualmente estoy profundizando en el desarrollo de proyectos con IA aplicada, integrando modelos y herramientas que aporten valor real a aplicaciones web y agentes conversacionales.
-            </span>            
+              Desarrollador con experiencia en Python, JavaScript y frameworks modernos como React y Vue. Capaz de crear soluciones tecnológicas eficientes y escalables con un enfoque cada vez más sólido en backend e integración de Inteligencia Artificial. Actualmente estoy profundizando en el desarrollo de proyectos con IA aplicada, integrando modelos y herramientas que aporten valor real a aplicaciones web y agentes conversacionales.
+            </span>
           </ContentTwo>
           <ContentNetworks>
             <CardNetworks href="https://github.com/frand-lebaza">
@@ -37,7 +42,157 @@ function Home() {
               <Text >LinkedIn</Text>
             </CardNetworks>
           </ContentNetworks>
+          <Name>Stack Tecnológico</Name>
+          <div className="parent">
+            <div className=" init div1">
+              <h3>Lenguajes</h3>
+              <ul>
+                <li>
+                  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siPython.hex}`}
+                  >
+                    <path d={siPython.path} />
+                  </SvgIcon> Python</li>
+                <li> <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siJavascript.hex}`}
+                >
+                  <path d={siJavascript.path} />
+                </SvgIcon> JavaScript (ES6+)</li>
+              </ul>
+            </div>
+
+            <div className="init div2">
+              <h3>Frontend</h3>
+              <ul>
+                <li>
+                   <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siReact.hex}`}
+                  >
+                    <path d={siReact.path} />
+                  </SvgIcon> React</li>
+                <li>
+                   <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siVuedotjs.hex}`}
+                  >
+                    <path d={siVuedotjs.path} />
+                  </SvgIcon> Vue</li>
+                <li>
+                   <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siTailwindcss.hex}`}
+                  >
+                    <path d={siTailwindcss.path} />
+                  </SvgIcon> Tailwind</li>
+                <li>
+                  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siStyledcomponents.hex}`}
+                  >
+                    <path d={siStyledcomponents.path} />
+                  </SvgIcon> styled-components</li>
+              </ul>
+            </div>
+
+            <div className="init div3">
+              <h3>Backend</h3>
+              <ul>
+                <li>  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siNodedotjs.hex}`}
+                  >
+                    <path d={siNodedotjs.path} />
+                  </SvgIcon> Node.js</li>
+                <li>
+                  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`white`}
+                  >
+                    <path d={siDjango.path} />
+                  </SvgIcon>  Django Rest Framework</li>
+                <li>  APIs REST</li>
+              </ul>
+            </div>
+
+            <div className=" init div4">
+              <h3>IA / Data</h3>
+              <ul>
+                <li> <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`white`}
+                  >
+                    <path d={siLangchain.path} />
+                  </SvgIcon> LangChain</li>
+                <li> <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`white`}
+                  >
+                    <path d={siLanggraph.path} />
+                  </SvgIcon> LangGraph</li>
+                <li>  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`white`}
+                  >
+                    <path d={siLangchain.path} />
+                  </SvgIcon> LangSmith</li>
+                <li> <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siOpenai.hex}`}
+                  >
+                    <path d={siOpenai.path} />
+                  </SvgIcon> LLM API</li>
+              </ul>
+            </div>
+
+            <div className="init div5">
+              <h3>Databases</h3>
+              <ul>
+                <li>
+                   <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siMysql.hex}`}
+                  >
+                    <path d={siMysql.path} />
+                  </SvgIcon>  MySQL</li>
+                <li>
+                  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siPostgresql.hex}`}
+                  >
+                    <path d={siPostgresql.path} />
+                  </SvgIcon> PostgreSQL</li>
+              </ul>
+            </div>
+            <div className="init div6">
+              <h3>Versions</h3>
+              <ul>
+                <li> <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siGit.hex}`}
+                  >
+                    <path d={siGit.path} />
+                  </SvgIcon> Git</li>
+                <li>  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`white`}
+                  >
+                    <path d={siGithub.path} />
+                  </SvgIcon> GitHub</li>
+                <li>  <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siGitlab.hex}`}
+                  >
+                    <path d={siGitlab.path} />
+                  </SvgIcon> GitLab</li>
+              </ul>
+            </div>
+          </div>
+
         </SectionContentY>
+
       </MainContainer>
     </>
   );
@@ -48,8 +203,8 @@ export default Home;
 // Estilo para el contenedor general
 
 const MainContainer = styled.div`
- background-color: #0A0A10;
-  min-height: 100vh;  
+ background-color: #0A0A10;  
+ padding: 50px 0;
 `;
 
 const SectionContentY = styled.div`  
@@ -59,12 +214,57 @@ const SectionContentY = styled.div`
     align-items: center;
     gap: 40px;
     min-height: 100vh;
-    margin-inline: 15%;
+    margin-inline: 15%;    
+    
+    .parent {
+        width: 100%;        
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        color: white;
+        
+        .init{          
+          display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 10px;  
+            padding-block: 10px;
+
+        }
+
+         .div1 { grid-area: 1 / 1 / 3 / 3; }
+        .div2 { grid-area: 1 / 5 / 3 / 7; }
+        .div3 { grid-area: 1 / 3 / 3 / 5; }
+        .div4 { grid-area: 3 / 1 / 5 / 3; }
+        .div5 { grid-area: 3 / 3 / 5 / 5; }
+        .div6 { grid-area: 3 / 5 / 5 / 7; }
+
+    }
+
 
     @media (max-width: 760px) {
         flex-direction: column;           
         gap: 30px;       
-        margin-inline: 0;   
+        margin-inline: 5%;  
+
+         .parent {
+            grid-template-columns: 1fr; /* una sola columna */
+            grid-template-rows: auto;   /* se ajustan automáticamente */
+            grid-row-gap: 20px;         /* separación entre divs */
+
+             /* cada div ocupa toda la fila */
+          .div1, .div2, .div3, .div4, .div5, .div6 {
+            grid-area: unset; /* quitamos la posición fija */
+          }
+         
+            }
+
+         
+            
     }
 `;
 
@@ -83,9 +283,9 @@ display: flex;
         align-items: flex-start;
 
         .text-profession{
-            font-size: 25px;
-            color: aquamarine;
-              animation: fadeIn 1s ease-in-out;
+            font-size: 1.5rem;
+            color: #4fd3b2ff;
+            animation: fadeIn 1s ease-in-out;
         }
     }
 
@@ -103,11 +303,12 @@ display: flex;
 `;
 
 const Logo = styled.img`  
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     transition: all 0.3s ease;
     border-radius: 50%;
+    border: 1px solid #605e5e;
      
     @media (max-width: 760px) {    
         width: 200px;
@@ -142,14 +343,10 @@ const ContentTwo = styled.div`
     border-bottom: 1px solid white;
     padding-bottom: 20px;
     text-align: justify;  
-    color: #e8ebeeff;
+    color: white;
 
     span{
       font-size: 1.5rem;      
-    }
-
-    .text-focus{
-      color: aquamarine;
     }
 
     @media (max-width: 760px) {
@@ -221,36 +418,13 @@ const Text = styled.a`
 const ContentNetworks = styled.div`
   display: flex;
 `
-const ContentSkills = styled.div`
-  display: flex;  
-  padding: 5px;
-  width: 80%;
+// Estilo base para el SVG
+const SvgIcon = styled.svg`
+  width: 20px;
+  height: 20px;  
+  transition: transform 0.2s ease-in-out;
 
-  .target{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;  
-    
-    height:auto;
-    padding: 20px;
-    gap: 5px;
-    .titleSkill{
-      color: aquamarine;
-      font-weight: bold;
-       font-size: 1.5rem;
-    }
-    .list{
-        
-        display: flex;
-  flex-direction: column;
-
-  .itemList{    
-       font-size: 1.5rem;
-       color: white;
+  &:hover {
+    transform: scale(1.1);
   }
-      
-    }
-
-  }
-`
+`;

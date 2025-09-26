@@ -74,10 +74,6 @@ function NavBar() {
         <span />
         <span />
       </Hamburger>
-      <Logo to="/">
-        <img src={scrolled ? logo1 : logo1} alt="Logo" />    
-        <Name>Frand Lebaza</Name>  
-      </Logo>
       <div className="car-shop">
 
         <NavLinks open={open} scrolled={scrolled}>
@@ -93,14 +89,14 @@ function NavBar() {
 }
 
 export default NavBar;
-
+//background-color: ${({ scrolled }) => (scrolled ? "#2422224d" : "#2422224d")};
 // Contenedor principal
 const Nav = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 97%;
-  background-color: ${({ scrolled }) => (scrolled ? "#2422224d" : "#2422224d")};
+  width: 80%;  
+  background-color: red;
   color: ${({ scrolled }) => (scrolled ? "white" : "white")};
   padding: 0.75rem 1.5rem;
   display: flex;
