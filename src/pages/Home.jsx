@@ -166,7 +166,7 @@ function Home() {
                   </SvgIcon> PostgreSQL</li>
               </ul>
             </div>
-            <div className="init div6">
+           {/*  <div className="init div6">
               <h3>Versions</h3>
               <ul>
                 <li> <SvgIcon
@@ -189,10 +189,57 @@ function Home() {
                   </SvgIcon> GitLab</li>
               </ul>
             </div>
+          </div> */}
+          <div className="init div6">
+ <div class="footer-2">
+  <h6>LENGUAGES</h6>
+        <div class="connections-2">
+            <div class="connection-2 facebook-2">
+              <div class="icon-2">
+                <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siGit.hex}`}
+                  >
+                    <path d={siGit.path} />
+                  </SvgIcon>
+              </div>
+              </div>
+            <div class="connection-2 twitter-2"><div class="icon-2">
+              <SvgIcon
+                    viewBox="0 0 24 24"
+                    fill={`#${siGit.hex}`}
+                  >
+                    <path d={siGit.path} />
+                  </SvgIcon></div></div>
+        </div>
+       
+        <div class="info-2">
+            <div class="name-2">Git</div>
+            <div class="name-2">GitHub</div>
+            <div class="name-2">GitLab</div>            
+        </div>
+    </div>
+    <div class="card-blur-2">
+      
+    </div>
           </div>
+          </div>
+                  </SectionContentY>
 
-        </SectionContentY>
-
+<div  class="card">
+    <div class="footer">
+        <div class="connections">
+            <div class="connection facebook"><div class="icon"></div></div>
+            <div class="connection twitter"><div class="icon"></div></div>
+        </div>
+       
+        <div class="info">
+            <div class="name">Filan Fisteku</div>
+            <div class="job">Architect Manager</div>
+        </div>
+    </div>
+    <div class="card-blur"></div>
+</div>
       </MainContainer>
     </>
   );
@@ -205,6 +252,125 @@ export default Home;
 const MainContainer = styled.div`
  background-color: #0A0A10;  
  padding: 50px 0;
+
+ .card {
+    position: absolute;
+    border-radius: 8px;
+    height: 450px;
+    width: 400px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 80px -10px black;
+    overflow: hidden;
+}
+
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+    opacity: 0.6;
+}
+
+.footer {
+    z-index: 1;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.connections {
+    height: 80px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+
+.connection {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.card:hover .connection {
+    transform: translateY(0px);
+}
+
+.info {
+	font-family: Inconsolata;
+    padding-left: 20px;
+    transform: translateY(250px);
+    
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.card:hover .info {
+    transform: translateY(0px);
+}
+
+.name {
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.job {
+    margin-top: 10px;
+}
+
+.connection.facebook {
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
+    padding: 0px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.connection.twitter {
+    transition-delay: 0.06s;
+}
+
+
+.connection.facebook .icon {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.twitter .icon {
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    margin-left: 4px;
+    background-position: center;
+    background-size: cover;
+}
+
+
 `;
 
 const SectionContentY = styled.div`  
@@ -233,9 +399,98 @@ const SectionContentY = styled.div`
             border: 1px solid white;
             border-radius: 10px;  
             padding-block: 10px;
+                overflow: hidden;
 
         }
 
+.card-blur-2 {  
+    height: 100%;
+    width: calc(100% + 1px);          
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.init:hover .card-blur-2 {
+    opacity: 0.6;
+}
+
+.footer-2 {
+    z-index: 1;    
+    height: 60px;
+    width: 100%;
+    bottom: 0;    
+}
+
+
+.connections-2 {
+    height: 80px;             
+}
+
+.connection-2 {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.init:hover .connection-2 {
+    transform: translateY(0px);
+}
+
+.info-2 {
+	font-family: Inconsolata;
+    padding-left: 20px;
+    transform: translateY(250px);
+    
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.init:hover .info-2 {
+    transform: translateY(0px);
+}
+
+.name-2 {
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.job-2 {
+    margin-top: 10px;
+}
+
+.connection-2.facebook-2 {
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
+    padding: 0px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.connection-2.twitter-2 {
+    transition-delay: 0.06s;
+}
+
+
+.connection-2.facebook-2 .icon-2 {
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    margin-left: 4px;    
+}
+
+.connection-2.twitter-2 .icon-2 {
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
          .div1 { grid-area: 1 / 1 / 3 / 3; }
         .div2 { grid-area: 1 / 5 / 3 / 7; }
         .div3 { grid-area: 1 / 3 / 3 / 5; }
