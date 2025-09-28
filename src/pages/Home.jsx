@@ -2,12 +2,12 @@ import styled, { keyframes } from "styled-components";
 import photo from "../media/frand.JPG"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { 
+import {
   siPython, siReact, siJavascript, siNodedotjs, siDjango, siMysql, siPostgresql, siGit, siGithub, siGitlab, siTailwindcss, siStyledcomponents, siLangchain,
   siLanggraph,
   siOpenai,
   siVuedotjs
- } from "simple-icons/icons";
+} from "simple-icons/icons";
 import { SiGit } from "react-icons/si";
 
 function Home() {
@@ -46,153 +46,169 @@ function Home() {
           <div className="parent">
             <div className=" init div1">
               <h3>Lenguajes</h3>
-              <ul>
-                <li>
-                  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siPython.hex}`}
-                  >
-                    <path d={siPython.path} />
-                  </SvgIcon> Python</li>
-                <li> <SvgIcon
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siPython.hex}`}
+                >
+                  <path d={siPython.path} />
+                </SvgIcon>
+                <SvgIcon
                   viewBox="0 0 24 24"
                   fill={`#${siJavascript.hex}`}
                 >
                   <path d={siJavascript.path} />
-                </SvgIcon> JavaScript (ES6+)</li>
+                </SvgIcon>
+              </div>
+              <ul>
+                <li> Python</li>
+                <li> JavaScript (ES6+)</li>
               </ul>
             </div>
 
             <div className="init div2">
               <h3>Frontend</h3>
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siReact.hex}`}
+                >
+                  <path d={siReact.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siVuedotjs.hex}`}
+                >
+                  <path d={siVuedotjs.path} />
+                </SvgIcon>
+
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siTailwindcss.hex}`}
+                >
+                  <path d={siTailwindcss.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siStyledcomponents.hex}`}
+                >
+                  <path d={siStyledcomponents.path} />
+                </SvgIcon>
+              </div>
               <ul>
-                <li>
-                   <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siReact.hex}`}
-                  >
-                    <path d={siReact.path} />
-                  </SvgIcon> React</li>
-                <li>
-                   <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siVuedotjs.hex}`}
-                  >
-                    <path d={siVuedotjs.path} />
-                  </SvgIcon> Vue</li>
-                <li>
-                   <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siTailwindcss.hex}`}
-                  >
-                    <path d={siTailwindcss.path} />
-                  </SvgIcon> Tailwind</li>
-                <li>
-                  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siStyledcomponents.hex}`}
-                  >
-                    <path d={siStyledcomponents.path} />
-                  </SvgIcon> styled-components</li>
+                <li>React</li>
+                <li>Vue</li>
+                <li>Tailwind</li>
+                <li>styled-components</li>
               </ul>
             </div>
 
             <div className="init div3">
               <h3>Backend</h3>
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siNodedotjs.hex}`}
+                >
+                  <path d={siNodedotjs.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siDjango.path} />
+                </SvgIcon>
+              </div>
               <ul>
-                <li>  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siNodedotjs.hex}`}
-                  >
-                    <path d={siNodedotjs.path} />
-                  </SvgIcon> Node.js</li>
-                <li>
-                  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`white`}
-                  >
-                    <path d={siDjango.path} />
-                  </SvgIcon>  Django Rest Framework</li>
-                <li>  APIs REST</li>
+                <li>Node.js</li>
+                <li>Django Rest Framework</li>
+                <li>APIs REST</li>
               </ul>
             </div>
 
             <div className=" init div4">
-              <h3>IA / Data</h3>
+              <h3>IA</h3>
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siLangchain.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siLanggraph.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siOpenai.path} />
+                </SvgIcon>
+              </div>
               <ul>
-                <li> <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`white`}
-                  >
-                    <path d={siLangchain.path} />
-                  </SvgIcon> LangChain</li>
-                <li> <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`white`}
-                  >
-                    <path d={siLanggraph.path} />
-                  </SvgIcon> LangGraph</li>
-                <li>  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`white`}
-                  >
-                    <path d={siLangchain.path} />
-                  </SvgIcon> LangSmith</li>
-                <li> <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siOpenai.hex}`}
-                  >
-                    <path d={siOpenai.path} />
-                  </SvgIcon> LLM API</li>
+                <li> LangChain</li>
+                <li> LangGraph</li>
+                <li> LangSmith</li>
+                <li> API LLM</li>
               </ul>
             </div>
 
             <div className="init div5">
               <h3>Databases</h3>
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siMysql.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siPostgresql.path} />
+                </SvgIcon>
+
+              </div>
               <ul>
-                <li>
-                   <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siMysql.hex}`}
-                  >
-                    <path d={siMysql.path} />
-                  </SvgIcon>  MySQL</li>
-                <li>
-                  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siPostgresql.hex}`}
-                  >
-                    <path d={siPostgresql.path} />
-                  </SvgIcon> PostgreSQL</li>
+                <li> MySQL</li>
+                <li> PostgreSQL</li>
               </ul>
             </div>
             <div className="init div6">
               <h3>Versions</h3>
+              <div className="section-icons">
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siGit.hex}`}
+                >
+                  <path d={siGit.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`white`}
+                >
+                  <path d={siGithub.path} />
+                </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siGitlab.hex}`}
+                >
+                  <path d={siGitlab.path} />
+                </SvgIcon>
+              </div>
               <ul>
-                <li> <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siGit.hex}`}
-                  >
-                    <path d={siGit.path} />
-                  </SvgIcon> Git</li>
-                <li>  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`white`}
-                  >
-                    <path d={siGithub.path} />
-                  </SvgIcon> GitHub</li>
-                <li>  <SvgIcon
-                    viewBox="0 0 24 24"
-                    fill={`#${siGitlab.hex}`}
-                  >
-                    <path d={siGitlab.path} />
-                  </SvgIcon> GitLab</li>
+                <li> Git</li>
+                <li> GitHub</li>
+                <li> GitLab</li>
               </ul>
             </div>
           </div>
 
         </SectionContentY>
-
       </MainContainer>
     </>
   );
@@ -232,10 +248,33 @@ const SectionContentY = styled.div`
             align-items: center;
             border: 1px solid white;
             border-radius: 10px;  
-            padding-block: 10px;
+            
+                overflow: hidden;
+
+            ul {
+  list-style: none;
+  margin: 0;   
+  padding: 0 20px;  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-block: 15px;
+}
+
+
+            .section-icons{                
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                gap:10px;
+                padding: 10px;
+                width: 100%;
+                }
 
         }
-
          .div1 { grid-area: 1 / 1 / 3 / 3; }
         .div2 { grid-area: 1 / 5 / 3 / 7; }
         .div3 { grid-area: 1 / 3 / 3 / 5; }
@@ -420,11 +459,16 @@ const ContentNetworks = styled.div`
 `
 // Estilo base para el SVG
 const SvgIcon = styled.svg`
-  width: 20px;
-  height: 20px;  
-  transition: transform 0.2s ease-in-out;
+  width: 25px;
+  height: 25px;  
+  animation: pulse 2s infinite;
 
-  &:hover {
-    transform: scale(1.1);
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
 `;
