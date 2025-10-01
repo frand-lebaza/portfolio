@@ -3,12 +3,16 @@ import photo from "../media/frand.JPG"
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import {
-  siPython, siReact, siJavascript, siNodedotjs, siDjango, siMysql, siPostgresql, siGit, siGithub, siGitlab, siTailwindcss, siStyledcomponents, siLangchain,
-  siLanggraph,
-  siOpenai,
-  siVuedotjs
+  siPython, siReact, siJavascript, 
+  siNodedotjs, siDjango, siMysql, 
+  siPostgresql, siGit, siGithub, siGitlab, 
+  siTailwindcss, siStyledcomponents, siLangchain,
+  siLanggraph, siOpenai, siVuedotjs,
+  siTypescript
 } from "simple-icons/icons";
-import { SiGit } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+
+import Agent from "../components/Agent";
 
 function Home() {
   return (
@@ -19,13 +23,13 @@ function Home() {
             <Logo src={photo} alt="Logo" />
             <div className="text-container">
               <Name>Frand Lebaza</Name>
-              <span className="text-profession">Desarrollador de software full stack</span>
+              <span className="text-profession">Desarrollador de software</span>
             </div>
 
           </ContentOne>
           <ContentTwo>
             <span>
-              Desarrollador con experiencia en Python, JavaScript y frameworks modernos como React y Vue. Capaz de crear soluciones tecnológicas eficientes y escalables con un enfoque cada vez más sólido en backend e integración de Inteligencia Artificial. Actualmente estoy profundizando en el desarrollo de proyectos con IA aplicada, integrando modelos y herramientas que aporten valor real a aplicaciones web y agentes conversacionales.
+              Desarrollador con experiencia en Python, JavaScript y frameworks modernos como React y Vue. Capaz de crear soluciones tecnológicas eficientes y escalables. Actualmente estoy enfocado en el desarrollo de proyectos con Inteligencia Artificial aplicada, integrando LLMs y herramientas que aporten valor real a aplicaciones web y agentes conversacionales.
             </span>
           </ContentTwo>
           <ContentNetworks>
@@ -42,7 +46,7 @@ function Home() {
               <Text >LinkedIn</Text>
             </CardNetworks>
           </ContentNetworks>
-          <Name>Stack Tecnológico</Name>
+          <Stack>Stack Tecnológico</Stack>
           <div className="parent">
             <div className=" init div1">
               <h3>Lenguajes</h3>
@@ -59,10 +63,17 @@ function Home() {
                 >
                   <path d={siJavascript.path} />
                 </SvgIcon>
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  fill={`#${siTypescript.hex}`}
+                >
+                  <path d={siTypescript.path} />
+                </SvgIcon>
               </div>
               <ul>
                 <li> Python</li>
                 <li> JavaScript (ES6+)</li>
+                <li> TypeScript</li>
               </ul>
             </div>
 
@@ -99,7 +110,7 @@ function Home() {
                 <li>React</li>
                 <li>Vue</li>
                 <li>Tailwind</li>
-                <li>styled-components</li>
+                <li>Styled-components</li>
               </ul>
             </div>
 
@@ -152,7 +163,7 @@ function Home() {
                 <li> LangChain</li>
                 <li> LangGraph</li>
                 <li> LangSmith</li>
-                <li> API LLM</li>
+                <li> API LLMs</li>
               </ul>
             </div>
 
@@ -179,7 +190,7 @@ function Home() {
               </ul>
             </div>
             <div className="init div6">
-              <h3>Versions</h3>
+              <h3>Control de versiones</h3>
               <div className="section-icons">
                 <SvgIcon
                   viewBox="0 0 24 24"
@@ -209,6 +220,9 @@ function Home() {
           </div>
 
         </SectionContentY>
+
+      <Agent/>
+
       </MainContainer>
     </>
   );
@@ -360,6 +374,29 @@ const Name = styled.span`
   font-size: 2rem; 
   font-weight: 600; 
   color: #e8ebeeff;
+  letter-spacing: 1px;
+
+  /* Animación suave al cargar */
+  animation: fadeIn 1s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }   
+
+`;
+
+const Stack = styled.span`
+  font-family: "Poppins", sans-serif; 
+  font-size: 2rem; 
+  font-weight: 600; 
+  color: #4fd3b2ff;
   letter-spacing: 1px;
 
   /* Animación suave al cargar */
