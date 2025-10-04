@@ -221,7 +221,7 @@ function Home() {
 
         </SectionContentY>
 
-      <Agent/>
+      {/* <Agent/> */}
 
       </MainContainer>
     </>
